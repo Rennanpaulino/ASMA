@@ -31,10 +31,10 @@ class Data():
         data['Qualidade'] = np.select(conditions, values)
     
         if ext.upper() == 'JSON' :
-            data.to_json('C:/Users/Rennan/Desktop/test.json')
+            data.to_json('C:/Temp/test.json')
             print('Exported to .JSON')
         elif ext.upper() == 'CSV' :
-            data.to_csv('C:/Users/Rennan/Desktop/test.csv')
+            data.to_csv('C:/Temp/test.csv')
             print("Exported to .CSV")
         else:
             return data            
