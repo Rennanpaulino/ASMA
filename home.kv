@@ -1,28 +1,33 @@
-<MyApp>:
-    orientation: 'vertical'
-    canvas.before:
-        Color:
-            rgba: 0, 0, 1, 1   # Cor azul sólida
-        Rectangle:
-            size: self.size
-            pos: self.pos
 
-    Label:
-        text: 'Minha Label'
-        size_hint_y: 0.5
-
+<Home>:
     BoxLayout:
-        orientation: 'horizontal'
-        size_hint_y: 0.1
+        orientation: 'vertical'
+        canvas.before:
+            Color:
+                rgba: 0, 0, 1, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
 
-        Button:
-            text: 'Botão 1'
-            size_hint_x: 0.33
+        Label:
+            text: 'Minha Label'
+            size_hint_y: 0.5
 
-        Button:
-            text: 'Botão 2'
-            size_hint_x: 0.33
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.1
 
-        Button:
-            text: 'Botão 3'
-            size_hint_x: 0.33
+            Button:
+                text: 'Botão 1'
+                size_hint_x: 0.33
+                on_press: app.button_pressed(1)
+
+            Button:
+                text: 'Botão 2'
+                size_hint_x: 0.33
+                on_press: app.button_pressed(2)
+
+            Button:
+                text: 'Botão 3'
+                size_hint_x: 0.33
+                on_press: app.button_pressed(3)
