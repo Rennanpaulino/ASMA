@@ -1,10 +1,11 @@
 
 <Home>:
+    name:'home'
     BoxLayout:
         orientation: 'vertical'
         canvas.before:
             Color:
-                rgba: 0, 25, 229, 230
+                rgba: 0, 0, 0, 1
             Rectangle:
                 size: self.size
                 pos: self.pos
@@ -20,13 +21,14 @@
             Button:
                 text: 'Sobre nós'
                 size_hint_x: 0.33
-                on_press: app.button_pressed(1)
+                on_release: app.root.current = 'sobrenos'
 
             Button:
                 text: 'Home'
                 size_hint_x: 0.33
-                on_press: app.button_pressed(2)
+                on_release: app.root.current = 'home'
 
             Button:
                 text: 'Previsões'
                 size: 50, 25
+                on_release: app.root.current = 'previsoes'

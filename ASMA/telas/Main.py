@@ -5,10 +5,16 @@ from kivy.uix.boxlayout import BoxLayout
 class Home(BoxLayout):
     pass
 
+class previsoes(BoxLayout):
+    pass
+
+class sobrenos(BoxLayout):
+    pass
 class Main(App):
     def build(self):
         self.load_kv('home.kv')
         return Home()
     
 
+    
 Main().run()
