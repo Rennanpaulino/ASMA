@@ -11,7 +11,7 @@
                 pos: self.pos
 
         Label:
-            text: 'Minha Label'
+            text: 'AQUI É A HOME PAGE'
             size_hint_y: 0.5
 
         BoxLayout:
@@ -21,14 +21,14 @@
             Button:
                 text: 'Sobre nós'
                 size_hint_x: 0.33
-                on_release: app.root.current = 'sobrenos'
+                on_press: app.root.current = 'sobre'
 
             Button:
                 text: 'Home'
                 size_hint_x: 0.33
-                on_release: app.root.current = 'home'
+                on_press: app.root.current = 'home'
 
             Button:
                 text: 'Previsões'
                 size: 50, 25
-                on_release: app.root.current = 'previsoes'
+                on_press: app.root.current = 'prev'

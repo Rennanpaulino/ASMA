@@ -1,15 +1,16 @@
-<previsoes>:
-   BoxLayout:
+<Prev>:
+    name:'prev'
+    BoxLayout:
         orientation: 'vertical'
         canvas.before:
             Color:
-                rgba: 0, 0, 0, 1
+                rgba: 1, 1, 0, 1
             Rectangle:
                 size: self.size
                 pos: self.pos
 
         Label:
-            text: 'Tela 3'
+            text: 'Pag 2'
             size_hint_y: 0.5
 
         BoxLayout:
@@ -19,7 +20,7 @@
             Button:
                 text: 'Sobre nós'
                 size_hint_x: 0.33
-                on_release: app.root.current = 'sobrenos'
+                on_release: app.root.current = 'sobre'
 
             Button:
                 text: 'Home'
@@ -29,5 +30,5 @@
             Button:
                 text: 'Previsões'
                 size: 50, 25
-                on_release: app.root.current = 'previsoes'
-
+                on_release: app.root.current = 'prev'
+  

@@ -1,20 +1,33 @@
 from kivy.app import App
 #from kivy.uix.gridlayout import GridLayout
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.lang import Builder
 
-class Home(BoxLayout):
+# Carregar os arquivos .kv
+
+Builder.load_file('home.kv')
+Builder.load_file('prev.kv')
+Builder.load_file('sobre.kv')
+
+
+class Home(Screen):
     pass
 
-class previsoes(BoxLayout):
+class Prev(Screen):
     pass
 
-class sobrenos(BoxLayout):
+class Sobre(Screen):
     pass
+
+
 class Main(App):
     def build(self):
-        self.load_kv('home.kv')
-        return Home()
+        sm = ScreenManager()
+        sm.add_widget(Home(name='home'))
+        sm.add_widget(Prev(name='prev'))
+        sm.add_widget(Sobre(name='sobre'))
+        return sm
     
 
-    
 Main().run()
