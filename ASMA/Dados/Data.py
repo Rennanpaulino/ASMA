@@ -8,6 +8,7 @@
     #print(soup.prettify())
     #table = soup.find("table", class_ = "font01")
     #print(table.prettify())
+import os
 import pandas as pd
 import numpy as np
 
@@ -32,13 +33,17 @@ class Data():
         
         output_data = 'dadosAr.json'
         
-        if ext.upper() == 'JSON' :
-            data.to_json(output_data, 'dadosAr.json')
-            print('Exported to .JSON')
-        elif ext.upper() == 'CSV' :
-            data.to_csv(output_data,'dadosAr.csv')
+        if ext.upper() == 'JSON':
+            if os.path.isfile('dadosAr.json'):
+                data.to_json('dadosAr.json')
+                print('Data overwritten to dadosAr.json')
+            else:
+                data.to_json('dadosAr.json')
+                print('New file dadosAr.json created with data')
+        elif ext.upper() == 'CSV':
+            data.to_csv('dadosAr.csv')
             print("Exported to .CSV")
         else:
-            return data            
+            return data
 
-    getdata('json') 
+    getdata('csv')
