@@ -41,4 +41,4 @@ class Data():
         else:
             return data            
 
-    getdata('csv') 
+    getdata('json') 
