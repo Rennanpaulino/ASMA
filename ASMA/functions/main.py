@@ -1,3 +1,4 @@
+import os
 import firebase_admin
 from firebase_admin import credentials, db
 import requests
@@ -5,10 +6,12 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 import json
-#from google.cloud import pubsub_v1
+
+# Verifica e imprime o diretório de trabalho atual
+print("Diretório de trabalho atual:", os.getcwd())
 
 # Configuração do Firebase
-cred = credentials.Certificate("serviceAccountKey.json")
+cred = credentials.Certificate("ASMA/functions/serviceAccountKey.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://asma-85af3-default-rtdb.firebaseio.com/'
 })
@@ -58,3 +61,6 @@ def getdata(event, context):
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
         return f"Ocorreu um erro: {e}", 500
+
+if __name__ == "__main__":
+    getdata(None, None)
