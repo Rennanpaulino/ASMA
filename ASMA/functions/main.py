@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 import json
-from google.cloud import pubsub_v1
+#from google.cloud import pubsub_v1
 
 # Configuração do Firebase
 cred = credentials.Certificate("serviceAccountKey.json")
