@@ -28,7 +28,7 @@ class AboutUsScreen(Screen):
       
 class PredictScreen(Screen):
     def PredictScreen(self, *args):
-       PredictScreen(self, *args)
+      PredictScreen(self, *args)
 
 class HomeScreen(Screen):
    def HomeScreen(self,*args):

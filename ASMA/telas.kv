@@ -5,6 +5,25 @@ ScreenManager:
 
 <HomeScreen>:
     name: 'home'
+
+    MDFloatLayout:
+        MDLabel:
+            text: "BOM"
+            theme_text_color: "Custom"
+            text_color: 0, 1, 0, 1
+            halign: "center"
+            font_size: "25sp"
+            pos_hint: {"center_x": .5, "center_y": .9}
+        MDLabel:
+            text: "Qualidade do Ar"
+            halign:"center"
+            font_size: "16sp"
+            pos_hint: {"center_x": .5, "center_y": .85}
+        Image:
+            source: "images/ASMA1.png"
+            pos_hint: {"center_x": .5, "center_y": .5}
+            size_hint: .5, .5
+            
     MDFloatLayout:
         MDIconButton:
             icon: "book"
@@ -18,14 +37,46 @@ ScreenManager:
             icon: "plus"
             pos_hint: {"center_x": .85, "center_y": .05}      
             on_press: app.root.current = 'predict'
+
+    MDFloatLayout:            
         Image:
-            source: "images/ASMA1.png"
-            pos_hint: {"center_x": .5, "center_y": .5}
-            size_hint: .7, .7
+            source: "images/umidade.png"
+            pos_hint: {"center_x": .3, "center_y": .2 }
+            size_hint: .8, .8
+        MDLabel:
+            text: "76%"
+            halign:"center"
+            font_size: "16sp"
+            pos_hint: {"center_x": .5, "center_y": .2}
+        MDLabel:
+            text: "Umidade"
+            halign: "center"
+            font_size: "16sp"
+            pos_hint: {"center_x": .5, "center_y": .15}
 
 
 <AboutUsScreen>:
     name: 'aboutUs'
+
+    MDFloatLayout:
+        pos_hint: {"center_x": .5, "center_y": .5}
+        MDLabel:
+            text: "Sobre o ASMA"
+            halign: "center"
+            font_size: "25sp"
+            pos_hint: {"center_x": .5, "center_y": .85}
+        MDLabel:
+            text: "Aplicação Sustentável de Monitoramento do Ar"
+            halign: "center"
+            font_size: "18"
+            pos_hint: {"center_x": .5, "center_y": .75}
+        BoxLayout:
+            size_hint: .9, .9
+            pos_hint: {"center_x": .5}
+            MDLabel:
+                text: "Esta aplicação é um projeto acadêmico baseado em monitoramento ambiental de tempo real. Pretendíamos criar um app capaz de mostrar notificações e alertas sobre qualidade do ar. Este é o ASMA - Aplicação Sustentável de Monitoramento do Ar. Usamos os dados de monitoramento da CETESB como nossa base de operações, e treinamos uma IA para melhorar o tempo real com os Resumos da Hora de Monitoramento de Ar. E, com a ajuda do ARDUÍNO e do LoRa, fomos capazes de colocar um sensor de umidade numa parte da cidade de São Paulo, usando seus dados para melhorar nosso app. Nosso intuito é simples: trazer facilidade no conhecimento de qualidade do ar, e ajudar aqueles com doenças respiratórias a previnir algumas ações."            
+                font_size: "12sp"
+
     MDFloatLayout:
         MDIconButton:
             icon: "book"

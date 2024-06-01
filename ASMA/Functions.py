@@ -7,5 +7,5 @@ from kivymd.uix.label import MDLabel
 
 global firebaseConfig 
 
-def callAboutUs(self, *args):
-    MDApp.get_running_app().root.current = 'aboutUs'
+def getData():
+    getData()
