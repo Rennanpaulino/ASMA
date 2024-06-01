@@ -16,7 +16,7 @@ Window.size = (350,580)
 
 global screen
 
-#cred = credentials.Certificate("serviceAccountKey.json")
+#cred = credentials.Certificate("ASMA/functions/serviceAccountKey.json")
 #firebase_admin.initialize_app(cred, {
 #    'databaseURL': 'https://asma-85af3-default-rtdb.firebaseio.com/'
 #})
